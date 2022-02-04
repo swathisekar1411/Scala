@@ -11,6 +11,8 @@ object assignment1 extends App {
     else (str.substring(0,2))*4
 
   }
+  println("Result: " + aString("program"))
+  println("Result: " + aString("java"))
   println("Result: " + aString("Scala"))
   println("Result: " + aString("string"))
 
@@ -23,18 +25,22 @@ object assignment1 extends App {
   }
   println("Result : "+ strring("java", 0 ))
   println("Result : "+ strring("java", 1 ))
+  println("Result : "+ strring("scala", 2))
+  println("Result : "+ strring("scala", 3))
 
   /* 3-Create a new string with the last char added at the front and back of a given string of length 1 or more.
     */
 
-  def str3 (str: String) :String = {
+  def stringg (str: String) :String = {
     if ((str.length) <= 1) str
     else (str.charAt((str.length) - 1) + str + str.charAt((str.length) - 1))
   }
-  println(str3("hello"))
-  println(str3("world"))
-
-  /*4: Create a new string where 'if' is added to the front of a given string.
+  println(stringg("hello"))
+  println(stringg("world"))
+  println(stringg("scala"))
+  println(stringg("program"))
+  
+   /*4: Create a new string where 'if' is added to the front of a given string.
    If the string already begins with 'if', return the string unchanged.
     */
   def string(str: String):String = {
@@ -43,6 +49,8 @@ object assignment1 extends App {
   }
   println(string(" I am happy "))
   println(string("If i was happy"))
+  println(string(" she is happy "))
+  println(string("If she was happy"))
 
   /*5-Check which number is nearest to the value 100 among two given integers.
     Return 0 if the two numbers are equal.
@@ -56,6 +64,9 @@ object assignment1 extends App {
     else num2
   }
   println(" the number is : " + checkNumber(110,120))
+  println(" the number is : " + checkNumber(60,80))
+  println(" the number is : " + checkNumber(170,180))
+  println(" the number is : " + checkNumber(140,70))
 
   /*6-Check whether two given integers are in the range x <= 20 to y >= 50 or y <= 20 to x >= 50,
      return true if the given numbers are within the range, or if the numbers are out of range return false
@@ -65,8 +76,13 @@ object assignment1 extends App {
     if (( x<=20 & y >= 50 ) || ( y <= 20 & x >= 50)) true
     else false
   }
+  
+  println(numRange(28,37))
+  println(numRange(15,38))
   println(numRange(20,31))
   println(numRange(5,8))
+  
+  
   /*7- Write a Scala program to check whether a specified character is happy or not.
   A character is happy when the same character appears to its left or right in a string.
  */
